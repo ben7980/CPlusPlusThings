@@ -3,6 +3,6 @@ using namespace std;
 
 int main() {
   const int p = 10;
-  const void *vp = &p;
-  void *vp = &p; // error
+  // const void *vp = &p;  // const pointer to const data
+  void *vp = (void*)&p; // ✅ C-style cast
 }
